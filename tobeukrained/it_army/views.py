@@ -14,16 +14,16 @@ def main(request):
         text = f'Приват Банк купує валюту {currency} по {value} грн'
     #context = {'key_a': key_a}
     context = {'text': text}
-    return render(request, 'index.html', context)
+    return render(request, 'it_army/index.html', context)
 
 
 def instuctions(request):
-    return render(request, 'instructions.html')
+    return render(request, 'it_army/instructions.html')
 
 
 def targets(request):
-    return render(request, 'targets.html')
+    return render(request, 'it_army/targets.html')
 
 
 def results(request):
-    return render(request, 'results.html')
+    return render(request, 'it_army/results.html')
