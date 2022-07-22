@@ -1,0 +1,18 @@
+{% extends "tools/index.html"%}
+{% block content%}
+    <p>
+    <form action="" method="GET">
+          <select name="currency" class="form-select form-select-lg" aria-label="Default select example">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+          </select>
+          <select name="action" class="form-select form-select-lg" aria-label="Default select example">
+            <option value="sale">Продаж</option>
+            <option value="purchase">Купівля</option>
+          </select>
+        <button type="submit" class="btn btn-primary">Перевірити курс</button>
+      </form>
+    </p>
+
+      <p class="font-monospace">{{ text }}</p>
+      {% endblock %}

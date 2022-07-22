@@ -1,8 +1,13 @@
+from this import d
 from django.shortcuts import render
 from tools.scripts.exchange_rate import exchangeRatePB
 
 
 def index(request):
+    return render(request, 'tools/index.html')
+
+
+def currency(request):
     currency = request.GET.get('currency')
     action = request.GET.get('action')
     value = exchangeRatePB(currency, action)
@@ -12,4 +17,8 @@ def index(request):
         text = f'Приват Банк купує валюту {currency} по {value} грн'
     #context = {'key_a': key_a}
     context = {'text': text}
-    return render(request, 'tools/index.html', context)
+    return render(request, 'tools/currency.html', context)
+
+
+def fuel(request):
+    return render(request, 'tools/fuel.html')
