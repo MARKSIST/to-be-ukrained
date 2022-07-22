@@ -1,37 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
 
     {% block title %}
     <title>Tools</title>
     {% endblock %}
-    
   </head>
   <body>
-
-    {% block nav %}
-    <ul class="nav nav-pills nav-fill">
-      <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="http://localhost:8000/tools">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="http://localhost:8000/tools/currency/">Currency</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="http://localhost:8000/tools/fuel/">Fuel</a>
-      </li>
-    </ul>
-    {% endblock %}
-
-    {% block content %}
-    <p>index Tools</p>
-    {% endblock %}
-
+    <div class="p-3">
+      {% block nav %}
+      <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="http://localhost:8000/tools">Home</a>
+          <a class="navbar-brand" href="http://localhost:8000/tools/currency"
+            >Currency</a
+          >
+          <a class="navbar-brand" href="http://localhost:8000/tools/fuel"
+            >Fuel</a
+          >
+        </div>
+      </nav>
+      {% endblock %} {% block content %}
+      <p>index Tools</p>
+      {% endblock %}
+    </div>
   </body>
 </html>

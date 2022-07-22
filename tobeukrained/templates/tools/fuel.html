@@ -1,4 +1,28 @@
-{% extends "tools/index.html"%}
-{% block content%}
-<p>Fufel</p>
+{% extends "tools/index.html"%} {% block content%}
+
+<h1>Розрахунок витрати пального</h1>
+<form action="">
+  <li>
+    <input id="GET-name" type="text" name="cost1Liter" />
+    <label for="GET-name">Вартість пального за 1 л:</label>
+  </li>
+  <li>
+    <input id="GET-name" type="text" name="fuelConsumption" />
+    <label for="GET-name">Витрата пального на 100 км:</label>
+  </li>
+  <li>
+    <input id="GET-name" type="text" name="distance" />
+    <label for="GET-name">Відстань яку необхідно проїхати:</label>
+  </li>
+  <input type="submit" value="Розрахувати" />
+</form>
+<p></p>
+Загальна кількість пального {{ totalFuel }} л.<br />
+Загальна вартість пального {{totalPrice}} грн.<br />
+<h1>Середня вартість пального в Україні</h1>
+(оновлюється 1 раз на добу)
+<p>
+  {%for key, value in fuelInfo.items %} {{key}} {{value}} грн<br />
+  {% endfor %}
+</p>
 {% endblock %}

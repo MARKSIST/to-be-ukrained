@@ -5,6 +5,6 @@
 # totalPrice - сума грн
 
 def fuelCostCalculator(cost1Liter, fuelConsumption, distance):
-    totalFuel = (distance / 100)*fuelConsumption
+    totalFuel = (distance/100)*fuelConsumption
     totalPrice = totalFuel*cost1Liter
     return totalFuel, totalPrice
