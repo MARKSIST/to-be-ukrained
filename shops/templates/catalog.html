@@ -1,0 +1,9 @@
+{% extends 'main.html' %} {% block content %}
+<p>Всього товарів {{ count }}</p>
+{% for product in products %}
+<p>
+  <a href="http://localhost:8000/product/{{ product.id }}"
+    >продукти {{ product }}</a
+  >
+</p>
+{% endfor %} {% endblock content %}

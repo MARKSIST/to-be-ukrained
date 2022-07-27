@@ -22,7 +22,6 @@ def currency(request):
 
 
 def fuel(request):
-
     cost1Liter = request.GET.get('cost1Liter')
     if cost1Liter is None:
         cost1Liter = 0

@@ -25,13 +25,9 @@
       {% block nav %}
       <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="http://localhost:8000/tools">Home</a>
-          <a class="navbar-brand" href="http://localhost:8000/tools/currency"
-            >Currency</a
-          >
-          <a class="navbar-brand" href="http://localhost:8000/tools/fuel"
-            >Fuel</a
-          >
+          <a class="navbar-brand" href="{% url 'home' %}">Home</a>
+          <a class="navbar-brand" href="{% url 'currency' %}">Currency</a>
+          <a class="navbar-brand" href="{% url 'fuel' %}">Fuel</a>
         </div>
       </nav>
       {% endblock %} {% block content %}
