@@ -2,8 +2,6 @@
 <p>Всього товарів {{ count }}</p>
 {% for product in products %}
 <p>
-  <a href="http://localhost:8000/product/{{ product.id }}"
-    >продукти {{ product }}</a
-  >
+  <a href="http://localhost:8000/product/{{ product.id }}">{{ product }}</a>
 </p>
 {% endfor %} {% endblock content %}
