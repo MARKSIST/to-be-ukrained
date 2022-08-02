@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MARKET</title>
-  </head>
-{% block content %}
-  <body>
-    <div>
-      <p>
-        <a href="{% url 'main' %}""><h1>LOGO</h1></a>
-      </p>
-    </div>
-  </body>
-  {% endblock content %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Market</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1><a href={% url 'main' %}>MARKET</a></h1>
+        <nav>
+            <ul>
+                <li><a href={% url 'main' %}>home</a></li>
+                <li><a href={% url 'main' %}>Catalog</a></li>
+            </ul>
+        </nav>
+        {% block conten %}
+        {% endblock content%}
+    </body>
 </html>
